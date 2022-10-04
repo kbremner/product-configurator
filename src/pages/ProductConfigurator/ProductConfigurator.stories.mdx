@@ -1,0 +1,30 @@
+<!-- App.stories.mdx -->
+
+import { Meta, Story } from "@storybook/addon-docs";
+
+import { rest } from "msw";
+
+import ProductConfigurator from ".";
+
+<Meta title="Product Configurator" component={ProductConfigurator} />
+
+# Product Configurator
+
+<Story name="Loads data">
+  <ProductConfigurator />
+</Story>
+
+<Story
+  name="Error loading data"
+  parameters={{
+    msw: {
+      handlers: {
+        api: [
+          rest.get("/api/products", (_req, res, ctx) => res(ctx.status(400))),
+        ],
+      },
+    },
+  }}
+>
+  <ProductConfigurator />
+</Story>

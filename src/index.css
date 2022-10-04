@@ -1,0 +1,18 @@
+body {
+  color: hsl(0, 0%, 21%);
+  margin: 0;
+  font-family: Roboto, Trebuchet MS, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: hsl(0, 0%, 12%);
+}
+
+::selection {
+  background: hsl(164, 100%, 30%); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: hsl(164, 100%, 30%); /* Gecko Browsers */
+}

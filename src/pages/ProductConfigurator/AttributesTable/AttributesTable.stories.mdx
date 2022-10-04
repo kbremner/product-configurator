@@ -1,0 +1,29 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import AttributesTable from ".";
+
+<Meta
+  title="Attributes Table"
+  component={AttributesTable}
+  argTypes={{
+    selectedProduct: {
+      control: { type: "object" },
+      defaultValue: {
+        price: 12.34,
+        attributes: [
+          { id: "pc1", label: "123" },
+          { id: "pt1", label: "Lined" },
+          { id: "cc1", label: "Sunset" },
+        ],
+      },
+    },
+  }}
+/>
+
+# Attributes Table
+
+export const Template = (args) => (
+  <AttributesTable selectedProduct={args.selectedProduct} />
+);
+
+<Story name="Renders select attributes">{Template.bind({})}</Story>

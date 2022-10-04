@@ -1,0 +1,28 @@
+.app {
+  display: grid;
+  grid-template-columns: 332px 1fr;
+
+  padding: 32px;
+}
+
+.app-header {
+  grid-column-start: 2;
+}
+
+.img-container {
+  grid-row-start: 2;
+  width: 300px;
+  padding-right: 30px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.content-container p {
+  margin-top: 0;
+}
+
+.content-container > * {
+  padding-bottom: 24px;
+}

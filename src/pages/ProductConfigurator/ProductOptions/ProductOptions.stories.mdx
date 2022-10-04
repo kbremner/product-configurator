@@ -1,0 +1,24 @@
+import { Meta, Story } from "@storybook/addon-docs";
+
+import ProductOptions from ".";
+
+<Meta
+  title="Product Options"
+  component={ProductOptions}
+  argTypes={{
+    id: { type: { name: "string" }, defaultValue: "1234" },
+    options: {
+      control: { type: "object" },
+      defaultValue: { opt1: "Option 1", opt2: "Option 2" },
+    },
+    onSelect: { action: "clicked" },
+    selected: { type: { name: "string" }, defaultValue: "opt1" },
+    label: { type: { name: "string" }, defaultValue: "Choose your thing" },
+  }}
+/>
+
+# Product Options
+
+export const Template = (args) => <ProductOptions {...args} />;
+
+<Story name="Renders options">{Template.bind({})}</Story>
